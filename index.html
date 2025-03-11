@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Subnetting Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Subnetting Tool</h1>
+        <form id="subnetForm">
+            <label for="ipAddress">IP Address:</label>
+            <input type="text" id="ipAddress" placeholder="e.g., 192.168.1.0" required>
+
+            <label for="subnetMask">Subnet Mask:</label>
+            <select id="subnetMask" required>
+                <option value="24">/24</option>
+                <option value="25">/25</option>
+                <option value="26">/26</option>
+                <option value="27">/27</option>
+                <option value="28">/28</option>
+                <option value="29">/29</option>
+                <option value="30">/30</option>
+            </select>
+
+            <button type="button" onclick="calculateSubnets()">Calculate</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;">
+            <h3>Calculated Subnet Information</h3>
+            <p id="ipResult"></p>
+            <p id="subnetResult"></p>
+            <p id="wildcardResult"></p>
+            <p id="binaryMaskResult"></p>
+            <p id="networkResult"></p>
+            <p id="usableRangeResult"></p>
+            <p id="broadcastResult"></p>
+            <p id="totalHostsResult"></p>
+            <p id="usableHostsResult"></p>
+            <p id="ipClassResult"></p>
+            <p id="cidrResult"></p>
+            <p id="ipTypeResult"></p>
+            <a id="detailsLink" href="#">View Step-by-Step Breakdown</a>
+        </div>
+    </div>
+</body>
+</html>
