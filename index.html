@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Subnetting Tool</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <!-- Introduction Section -->
+    <div id="introSection" class="intro-container">
+        <h1>Welcome to the Advanced Subnetting Tool</h1>
+        <p>This tool helps you calculate subnet details with ease.</p>
+        
+        <!-- Navigation Button -->
+        <button class="start-button" onclick="showTool()">Get Started</button>
+    </div>
+
+    <!-- Subnetting Tool Section (Initially Hidden) -->
+    <div id="toolSection" class="container" style="display: none;">
         <h1>Advanced Subnetting Tool</h1>
         <form id="subnetForm">
             <label for="ipAddress">IP Address:</label>
@@ -45,5 +55,12 @@
             <a id="detailsLink" href="#">View Step-by-Step Breakdown</a>
         </div>
     </div>
+
+    <script>
+        function showTool() {
+            document.getElementById("introSection").style.display = "none";
+            document.getElementById("toolSection").style.display = "block";
+        }
+    </script>
 </body>
 </html>
