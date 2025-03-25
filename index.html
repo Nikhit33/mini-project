@@ -8,8 +8,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Introduction Section -->
-    <div id="introSection" class="intro-container">
+
+    <!-- Landing Page Section -->
+    <div id="landingPage" class="intro-container">
+        <h1>Welcome to the Advanced Subnetting Tool</h1>
+        <p>This tool helps you calculate subnet details with ease.</p>
+        <button class="start-button" onclick="showIntro()">Get Started</button>
+    </div>
+
+    <!-- Introduction Section (Initially Hidden) -->
+    <div id="introSection" class="intro-container" style="display: none;">
         <h1>Welcome to the Advanced Subnetting Tool</h1>
         <p>This tool helps you calculate subnet details with ease.</p>
         
@@ -42,10 +50,10 @@
 
         <h3>Why is Subnetting Important?</h3>
         <ul>
-            <strong>Efficient Use of IP Addresses</strong> – Prevents wastage of IPs, especially in IPv4 networks.<br/>
-            <strong>Improved Network Performance</strong> – Reduces congestion by isolating traffic within subnets.<br/>
-            <strong>Enhanced Security</strong> – Limits exposure by segmenting networks.<br/>
-            <strong>Better Network Management</strong> – Helps control traffic flow and optimize routing.<br/>
+            <li><strong>Efficient Use of IP Addresses</strong> – Prevents wastage of IPs, especially in IPv4 networks.</li>
+            <li><strong>Improved Network Performance</strong> – Reduces congestion by isolating traffic within subnets.</li>
+            <li><strong>Enhanced Security</strong> – Limits exposure by segmenting networks.</li>
+            <li><strong>Better Network Management</strong> – Helps control traffic flow and optimize routing.</li>
         </ul>
 
         <!-- Navigation Button -->
@@ -92,6 +100,11 @@
     </div>
 
     <script>
+        function showIntro() {
+            document.getElementById("landingPage").style.display = "none";
+            document.getElementById("introSection").style.display = "block";
+        }
+
         function showTool() {
             document.getElementById("introSection").style.display = "none";
             document.getElementById("toolSection").style.display = "block";
