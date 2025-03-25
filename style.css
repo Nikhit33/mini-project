@@ -55,3 +55,28 @@ button:hover {
     border: 1px solid #c3e6cb;
     border-radius: 4px;
 }
+
+.intro-container {
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+.start-button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding for better sizing */
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Ensures it doesn't take full width */
+    min-width: 120px; /* Set a minimum width if necessary */
+    max-width: 200px; /* Prevents it from being too wide */
+    text-align: center;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
